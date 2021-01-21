@@ -9,13 +9,13 @@ namespace Ava.UI.Helpers
 {
     public class MailHelper
     {
-        public static bool SendContact(ContactVM contact)
+        public static bool SendContact()
         {
             MailMessage msg = new MailMessage();
             msg.To.Add("gönderilecekMail");
             msg.Subject = "Ava.com";
             msg.IsBodyHtml = true;
-            msg.Body = string.Format("<!DOCTYPE html>< html >< head >< title > Ava.com </ title ></ head >< body >< p > İsim: {0}</ p >< p > E - Mail: {1}</ p >< p > Mesajı: {2}</ p ></ body ></ html > ",contact.Name,contact.Email,contact.Message);
+            msg.Body = string.Format("içerik html formatında <!DOCTYPE html>< html >< head >< title > Html  </ title ></ head >< body >< p > İsim: {0}</ p >< p > E - Mail: {1}</ p >< p > Mesajı: {2}</ p ></ body ></ html > ");
             msg.From = new MailAddress("Gönderen mail", "Gösterilecek ad");
 
             SmtpClient client = new SmtpClient("smtp.office365.com", 587);
