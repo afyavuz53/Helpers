@@ -1,4 +1,4 @@
-﻿using CloudinaryDotNet;
+﻿using CloudinaryDotNet;         //Paket yüklemeniz gerekli
 using CloudinaryDotNet.Actions;
 using System;
 using System.Collections.Generic;
