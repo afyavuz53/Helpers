@@ -28,5 +28,18 @@ namespace Ava.UI.WinForm.Helper
             var uploadResult = cloudinary.Upload(uploadParams); //    görselin yüklendiği url'i elde edebilirsiniz.
             return uploadResult.Uri.AbsoluteUri;      
         }
+        [Obsolete]
+        public async static Task<string> UploadImageToCloudinaryAsync(string imagePath) // aynı method'un asenkron hali.
+        {
+            Account account = new Account(cloud_name, api_key, api_secret);
+            Cloudinary cloudinary = new Cloudinary(account);
+
+            var uploadParams = new ImageUploadParams()
+            {
+                File = new FileDescription(imagePath)
+            };                      
+            var uploadResult =await cloudinary.UploadAsync(uploadParams);
+            return uploadResult.Uri.AbsoluteUri;
+        }
     }
 }
