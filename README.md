@@ -7,4 +7,4 @@
 
  3.MailHelper: Mail göndermek için kullanılabilir.
 
- 4.UploadImage: https://cloudinary.com sitesinin API servisini kullanarak siteye görsel depoloma.
+ 4.UploadImage: https://cloudinary.com sitesinin API servisini kullanarak siteye görsel depoloma.Video ile anlatım ==>> https://youtu.be/Z4lpdCtrLT8
